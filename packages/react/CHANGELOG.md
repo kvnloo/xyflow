@@ -1,5 +1,13 @@
 # @xyflow/react
 
+## 12.10.1
+
+### Patch Changes
+
+- [#5687](https://github.com/xyflow/xyflow/pull/5687) [`2624479ad`](https://github.com/xyflow/xyflow/commit/2624479ad3d0b06fcb690242b2372ff2a7e16f54) Thanks [@vkrol](https://github.com/vkrol)! - Optimize zooming performance when panOnScroll mode is enabled
+
+- [#5692](https://github.com/xyflow/xyflow/pull/5692) [`49646858f`](https://github.com/xyflow/xyflow/commit/49646858f951455921aedbb83725b4225dbdef9d) Thanks [@moklick](https://github.com/moklick)! - Handle undefined node in mini map
+
 ## 12.10.0
 
 ### Minor Changes

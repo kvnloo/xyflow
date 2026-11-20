@@ -1,0 +1,257 @@
+.kv-lab {
+  --kv-acid: #d9fa80;
+  --kv-coral: #ff7a5c;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  min-height: 0;
+  padding: 24px clamp(16px, 5vw, 76px) 20px;
+  background: #161816;
+  color: #f1f1e7;
+  color-scheme: dark;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+.kv-topline,
+.kv-stage-head,
+.kv-footer,
+.kv-kicker,
+.kv-module small,
+.kv-port-index,
+.kv-status {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+.kv-topline,
+.kv-stage-head,
+.kv-footer,
+.kv-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.kv-topline,
+.kv-stage-head,
+.kv-footer {
+  color: #a2a69a;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+.kv-topline {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #373b34;
+}
+.kv-topline b,
+.kv-kicker {
+  color: var(--kv-acid);
+}
+.kv-intro {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 0 22px;
+}
+.kv-kicker {
+  margin: 0 0 5px;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+.kv-intro h1 {
+  margin: 0;
+  font-size: clamp(38px, 6vw, 76px);
+  letter-spacing: -0.08em;
+  line-height: 0.98;
+  font-weight: 620;
+}
+.kv-intro h1 em {
+  color: var(--kv-acid);
+  font-weight: 450;
+}
+.kv-description {
+  max-width: 26ch;
+  margin: 0 0 3px;
+  color: #bfc3b7;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.kv-stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  background: #1b1e1b;
+  border: 1px solid #3d4139;
+  border-radius: 16px;
+}
+.kv-stage-head {
+  padding: 12px 16px;
+  border-bottom: 1px solid #333730;
+  background: #20231f;
+}
+.kv-stage-head i,
+.kv-status i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: var(--kv-coral);
+  vertical-align: 1px;
+}
+.kv-flow {
+  flex: 1 1 auto;
+  height: clamp(360px, 57vh, 650px);
+}
+.kv-tools {
+  flex-wrap: wrap;
+  padding: 9px 12px 9px 16px;
+  border-top: 1px solid #353a33;
+  background: #20231f;
+}
+.kv-buttons {
+  display: flex;
+  gap: 7px;
+}
+.kv-buttons button {
+  padding: 7px 13px;
+  border: 1px solid #5d6357;
+  border-radius: 7px;
+  background: #292d27;
+  color: #edece1;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+}
+.kv-buttons button:hover:not(:disabled) {
+  border-color: var(--kv-acid);
+}
+.kv-buttons .kv-action {
+  background: var(--kv-acid);
+  color: #202716;
+  font-weight: 700;
+  border-color: transparent;
+}
+.kv-buttons button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.kv-status {
+  color: #d4d8cc;
+  font-size: 11px;
+}
+.kv-status span {
+  color: #a2a69a;
+}
+.kv-footer {
+  margin-top: 12px;
+  letter-spacing: 0;
+}
+.kv-module {
+  box-sizing: border-box;
+  width: 176px;
+  padding: 5px;
+  border: 1px solid #535951;
+  border-radius: 14px;
+  background: #292d28;
+  box-shadow:
+    inset 0 1px 0 #ffffff13,
+    0 5px 14px #0004;
+  color: #f0efe6;
+}
+.kv-module-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 9px;
+}
+.kv-module strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 650;
+}
+.kv-module small {
+  color: #b2b9a9;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+}
+.kv-node-symbol {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #586247;
+  border-radius: 7px;
+  color: var(--kv-acid);
+  background: #333a2a;
+}
+.kv-ports {
+  padding: 4px 0;
+  border: 1px solid #20221f;
+  border-radius: 9px;
+  background: #222522;
+}
+.kv-port {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 39px;
+  padding: 0 10px;
+  margin: 0 3px;
+  color: #dadcd0;
+  font-size: 12px;
+}
+.kv-port + .kv-port {
+  border-top: 1px solid #373b35;
+}
+.kv-port-index {
+  color: #9da498;
+  font-size: 10px;
+}
+.kv-module .react-flow__handle {
+  width: 10px;
+  height: 10px;
+  box-sizing: border-box;
+  background: #999c91;
+  border: 2px solid #262a25;
+  outline: 1px solid #7c8277;
+}
+.kv-port:last-child .react-flow__handle {
+  background: var(--kv-coral);
+  outline-color: #bd6754;
+}
+.kv-module .react-flow__handle:hover {
+  background: var(--kv-acid);
+  outline-color: var(--kv-acid);
+}
+.kv-port .react-flow__handle-right {
+  right: -9px;
+}
+.kv-port .react-flow__handle-left {
+  left: -9px;
+}
+.kv-module-border {
+  width: 160px;
+}
+.kv-module-border .react-flow__handle {
+  opacity: 0.36;
+}
+.kv-lab .react-flow__node.selected .kv-module {
+  border-color: var(--kv-acid);
+}
+.kv-lab .react-flow__connection-path {
+  stroke: #a7ada1;
+}
+@media (max-width: 540px) {
+  .kv-intro {
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .kv-flow {
+    height: 350px;
+  }
+}

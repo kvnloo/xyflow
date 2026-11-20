@@ -25,6 +25,7 @@ import FloatingEdges from '../examples/FloatingEdges';
 import Hidden from '../examples/Hidden';
 import Interaction from '../examples/Interaction';
 import Intersection from '../examples/Intersection';
+import KvnlooInteractions from '../examples/KvnlooInteractions';
 import Layouting from '../examples/Layouting';
 import MultiFlows from '../examples/MultiFlows';
 import MultiSetNodes from '../examples/MultiSetNodes';
@@ -243,6 +244,11 @@ const routes: IRoute[] = [
     name: 'Interactive Minimap',
     path: 'interactive-minimap',
     component: InteractiveMinimap,
+  },
+  {
+    name: 'Patch Lab',
+    path: 'kvnloo-interactions',
+    component: KvnlooInteractions,
   },
   {
     name: 'Layouting',

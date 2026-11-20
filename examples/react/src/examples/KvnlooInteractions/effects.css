@@ -1,0 +1,73 @@
+.kv-magnetic,
+.kv-snap,
+.kv-clamp,
+.kv-signal,
+.kv-wire-selection {
+  pointer-events: none;
+}
+.kv-preview,
+.kv-wire-selection {
+  fill: none;
+}
+.kv-preview {
+  stroke: var(--kv-coral, #ff7a5c);
+  stroke-width: 1.5;
+}
+.kv-tip,
+.kv-signal {
+  fill: var(--kv-coral, #ff7a5c);
+}
+.kv-halo {
+  fill: var(--kv-acid, #dbfa79);
+}
+.kv-wire .kv-wire-path {
+  stroke: var(--kv-wire, #81847f);
+  stroke-width: 1.4;
+}
+.kv-wire[data-tied] .kv-wire-path {
+  stroke: var(--kv-wire-tied, #9a9e95);
+}
+.kv-wire-selection {
+  stroke: var(--kv-acid, #dbfa79);
+  stroke-width: 4;
+  opacity: 0.8;
+}
+.kv-snap {
+  position: absolute;
+  overflow: visible;
+}
+.kv-snap-collapse {
+  fill: var(--kv-acid, #dbfa79);
+  animation: kv-collapse 130ms ease-out both;
+}
+.kv-snap-ring {
+  fill: none;
+  stroke: var(--kv-acid, #dbfa79);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+  animation: kv-ring 430ms 90ms ease-out both;
+}
+@keyframes kv-collapse {
+  from {
+    opacity: 0.38;
+  }
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes kv-ring {
+  from {
+    opacity: 0.95;
+    transform: scale(0.34);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kv-snap {
+    display: none;
+  }
+}
